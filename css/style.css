@@ -9,6 +9,19 @@ body{
    margin: auto;
 }
 
-header input:focus {
-   /* outline: none; */
+#modal_button_1:hover{
+   color: white!important;
+}
+
+#modal_button_2:hover{
+   border: 1px solid #F87272;
+   background: white;
+   color: #F87272;
+}
+
+.team{
+   background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.5)), url(../images/team.png);
+   background-size: cover;
+   background-position: center center;
+   color: white;
 }
