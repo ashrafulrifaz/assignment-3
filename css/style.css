@@ -3,3 +3,12 @@
 body{
    font-family: 'Lato', sans-serif;
 }
+
+.mycontainer{
+   max-width: 85%;
+   margin: auto;
+}
+
+header input:focus {
+   /* outline: none; */
+}
