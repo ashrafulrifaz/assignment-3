@@ -10,7 +10,7 @@ html, body{
 }
 
 .mycontainer{
-   max-width: 85%;
+   max-width: 92%;
    margin: auto;
 }
 
@@ -57,4 +57,10 @@ html, body{
    background-size: cover;
    background-position: center center;
    color: white;
+}
+
+@media screen and(min-width: 625px) {
+   .mycontainer{
+      max-width: 85%;
+   }
 }
