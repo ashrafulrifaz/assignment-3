@@ -18,25 +18,25 @@
       <!-- HEADER -->
 
       <header class="py-2 lg:py-10">
-         <div class="navbar bg-white lg:bg-[#F85559] rounded-full items-center px-0 lg:px-8 py-5">
-            <div class="hidden lg:navbar-start">
+         <div class="navbar bg-white lg:bg-[#F85559] rounded-full items-center px-0 lg:px-8 py-5 justify-between">
+            <div class="hidden sm:block navbar-start sm:order-last lg:order-none">
                <ul class="flex">
                   <li>
-                     <a href="#" class="text-base text-white">Home</a>
+                     <a href="#" class="text-base sm:text-black lg:text-white">Home</a>
                   </li>
                   <li>
-                     <a href="#" class="pl-6 text-base text-white">About Us</a>
+                     <a href="#" class="pl-6 text-base sm:text-black lg:text-white">About Us</a>
                   </li>
                   <li>
-                     <a href="#" class="pl-6 text-base text-white">Shop</a>
+                     <a href="#" class="pl-6 text-base sm:text-black lg:text-white">Shop</a>
                   </li>
                   <li>
-                     <a href="#" class="pl-6 text-base text-white">All Fruits</a>
+                     <a href="#" class="pl-6 text-base sm:text-black lg:text-white">All Fruits</a>
                   </li>
                </ul>
             </div>
-            <div class="navbar-start lg:navbar-center">
-               <div class="flex items-center gap-2.5">
+            <div class="navbar-center sm:order-first lg:order-none">
+               <div class="flex items-center justify-center gap-2.5">
                   <img src="images/logo.png" class="w-10">
                   <span class="text-xl lg:text-[28px] text-[#121212] lg:text-white font-bold">Fruit Burst</span>
                </div>
@@ -46,11 +46,36 @@
                   <input type="text" placeholder="Search here" class="focus:outline-none">
                   <i class="fa-solid fa-magnifying-glass"></i>
                </div>
-               <div class="lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none">
-                     <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-               </div>
+               <div class="dropdown dropdown-end sm:hidden">
+                  <label tabindex="0" class="btn btn-ghost btn-circle">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                  </label>
+                  <div tabindex="0" class="z-[1] card card-compact dropdown-content w-40 bg-base-100 shadow-lg border border-solid border-gray-200 rounded-lg">
+                    <div class="card-body">
+                      <!-- <span class="font-bold text-lg">8 Items</span>
+                      <span class="text-info">Subtotal: $999</span>
+                      <div class="card-actions">
+                        <button class="btn btn-primary btn-block">View cart</button>
+                      </div> -->
+                      <ul>
+                        <li class="pb-2 border-b border-solid border-gray-300">
+                           <a href="#" class="text-base sm:text-black lg:text-white">Home</a>
+                        </li>
+                        <li class="py-2 border-b border-solid border-gray-300">
+                           <a href="#" class="text-base sm:text-black lg:text-white">About Us</a>
+                        </li>
+                        <li class="py-2 border-b border-solid border-gray-300">
+                           <a href="#" class="text-base sm:text-black lg:text-white">Shop</a>
+                        </li>
+                        <li class="pt-2">
+                           <a href="#" class="text-base sm:text-black lg:text-white">All Fruits</a>
+                        </li>
+                     </ul>
+                    </div>
+                  </div>
+                </div>
             </div>
          </div>
       </header>
@@ -61,7 +86,7 @@
          <div class="rounded-lg">
             <div class="carousel w-full rounded">
                <div id="slide1" class="carousel-item relative w-full border border-solid border-black">
-                 <div class="p-12 lg:pb-40 w-full text-center">
+                 <div class="p-12 sm:pb-40 w-full text-center">
                      <div class="w-full">
                         <h2 class="text-2xl lg:text-6xl font-bold text-">Exotic tastes at your <br class="hidden md:block"> doorstep</h2>
                         <p class="mt-3 mb-5 text-base font-normal">We supply highly quality organic products</p>
@@ -149,8 +174,8 @@
 
          <!-- FRUITS -->
 
-         <div class="hidden lg:block">
-            <div class="w-10/12 relative bottom-20 m-auto bg-white rounded-lg px-16 py-8 flex justify-between text-center shadow-lg">
+         <div class="hidden sm:block">
+            <div class="w-10/12 relative bottom-16 lg:bottom-20 m-auto bg-white rounded-lg p-8 lg:px-16 flex justify-between text-center shadow-lg">
                <div>
                   <img src="images/fruit1.png" class="w-3/5 m-auto">
                   <span class="text-[#121212] text-base mt-6">Strawberry</span>
@@ -178,38 +203,38 @@
 
       <!-- DEAL -->
 
-      <section class="py-12">
+      <section class="py-6 lg:py-12">
          <div class="flex flex-col lg:flex-row justify-between">
             <div class="text-center lg:text-left">
                <h2 class="text-[#121212] text-4xl font-bold mb-3">Deal of the day</h2>
-               <p class="text-base text-[#12121299]">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
+               <p class="text-base text-[#12121299]">Contrary to popular belief, is not simply random text. It has roots in a piece<br class="hidden sm:block"> of classical Latin literature from 45 BC, making it over 2000 years old.</p>
             </div>
             <div class="mt-6 lg:mt-0 flex justify-center lg:justify-end">
                <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
                   <div class="flex flex-col">
-                    <span class="countdown font-mono text-3xl lg:text-5xl">
-                      <span style="--value:15;"></span>
+                    <span class="countdown font-bold text-3xl lg:text-5xl">
+                      <span style="--value:29;"></span>
                     </span>
                     days
                   </div>
                   <span class="text-4xl">:</span>
                   <div class="flex flex-col">
-                    <span class="countdown font-mono text-3xl lg:text-5xl">
-                      <span style="--value:10;"></span>
+                    <span class="countdown font-bold text-3xl lg:text-5xl">
+                      <span style="--value:15;"></span>
                     </span>
                     hours
                   </div> 
                   <span class="text-4xl">:</span>
                   <div class="flex flex-col">
-                    <span class="countdown font-mono text-3xl lg:text-5xl">
-                      <span style="--value:24;"></span>
+                    <span class="countdown font-bold text-3xl lg:text-5xl">
+                      <span style="--value:25;"></span>
                     </span>
                     min
                   </div> 
                   <span class="text-4xl">:</span>
                   <div class="flex flex-col">
-                    <span class="countdown font-mono text-3xl lg:text-5xl">
-                      <span style="--value:21;"></span>
+                    <span class="countdown font-bold text-3xl lg:text-5xl">
+                      <span style="--value:10;"></span>
                     </span>
                     sec
                   </div>
@@ -217,7 +242,7 @@
             </div>
          </div>
 
-         <div class="grid grid-cols-1 lg:grid-cols-4 justify-between text-center mt-10 gap-6">
+         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-between text-center mt-10 gap-6">
             <div class="border border-solid border-gray p-7">
                <img src="images/fruit6.png" class="w-[41%] m-auto">
                <h6 class="text-lg font-bold mt-5 mb-3">12.90$ - 18.85$</h6>
@@ -243,17 +268,17 @@
                   <h2 class="text-2xl font-extrabold text-black my-4">Apples</h2>
                   <p class="text-[15px] text-[#12121299]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                   <div class="rating rating rating-half my-4">
-                     <input type="radio" name="rating-10" class="rating-hidden" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-20" class="rating-hidden" />
+                     <input type="radio" name="rating-20" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                     <input type="radio" name="rating-20" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-20" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
+                     <input type="radio" name="rating-20" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-20" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-20" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-20" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-20" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-20" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-20" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
                   </div>
                   <div class="modal-action gap-4 justify-center">                     
                      <button class="btn btn-error btn-outline px-6" id="modal_button_1">Close</button>
@@ -268,17 +293,17 @@
                <hr class="w-3/4 m-auto bg-gray">
                <p class="text-[#12121299] text-sm font-bold my-3">Orange</p>
                <div class="rating rating-sm rating-half">
-                  <input type="radio" name="rating-10" class="rating-hidden" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-30" class="rating-hidden" />
+                  <input type="radio" name="rating-30" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-30" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-30" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
+                  <input type="radio" name="rating-30" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-30" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                  <input type="radio" name="rating-30" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-30" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                  <input type="radio" name="rating-30" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-30" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                  <input type="radio" name="rating-30" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
                </div>
                <button class="text-[#F85559] block m-auto mt-2.5 hover:underline" onclick="my_modal_2.showModal()">Details</button>
                <dialog id="my_modal_2" class="modal">
@@ -287,17 +312,17 @@
                   <h2 class="text-2xl font-extrabold text-black my-4">Orange</h2>
                   <p class="text-[15px] text-[#12121299]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                   <div class="rating rating rating-half my-4">
-                     <input type="radio" name="rating-10" class="rating-hidden" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-40" class="rating-hidden" />
+                     <input type="radio" name="rating-40" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                     <input type="radio" name="rating-40" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-40" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
+                     <input type="radio" name="rating-40" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-40" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-40" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-40" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-40" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-40" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-40" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
                   </div>
                   <div class="modal-action gap-4 justify-center">                     
                      <button class="btn btn-error btn-outline px-6" id="modal_button_1">Close</button>
@@ -312,17 +337,17 @@
                <hr class="w-3/4 m-auto bg-gray">
                <p class="text-[#12121299] text-sm font-bold my-3">Red Dragon</p>
                <div class="rating rating-sm rating-half">
-                  <input type="radio" name="rating-10" class="rating-hidden" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-50" class="rating-hidden" />
+                  <input type="radio" name="rating-50" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-50" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-50" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
+                  <input type="radio" name="rating-50" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-50" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                  <input type="radio" name="rating-50" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-50" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                  <input type="radio" name="rating-50" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-50" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                  <input type="radio" name="rating-50" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
                </div>
                <button class="text-[#F85559] block m-auto mt-2.5 hover:underline" onclick="my_modal_3.showModal()">Details</button>
                <dialog id="my_modal_3" class="modal">
@@ -331,17 +356,17 @@
                   <h2 class="text-2xl font-extrabold text-black my-4">Red Dragon</h2>
                   <p class="text-[15px] text-[#12121299]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                   <div class="rating rating rating-half my-4">
-                     <input type="radio" name="rating-10" class="rating-hidden" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-60" class="rating-hidden" />
+                     <input type="radio" name="rating-60" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                     <input type="radio" name="rating-60" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-60" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
+                     <input type="radio" name="rating-60" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-60" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-60" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-60" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-60" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-60" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-60" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
                   </div>
                   <div class="modal-action gap-4 justify-center">                     
                      <button class="btn btn-error btn-outline px-6" id="modal_button_1">Close</button>
@@ -356,17 +381,17 @@
                <hr class="w-3/4 m-auto bg-gray">
                <p class="text-[#12121299] text-sm font-bold my-3">Banana</p>
                <div class="rating rating-sm rating-half">
-                  <input type="radio" name="rating-10" class="rating-hidden" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                  <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-70" class="rating-hidden" />
+                  <input type="radio" name="rating-70" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                  <input type="radio" name="rating-70" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-70" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
+                  <input type="radio" name="rating-70" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-70" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                  <input type="radio" name="rating-70" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-70" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                  <input type="radio" name="rating-70" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                  <input type="radio" name="rating-70" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                  <input type="radio" name="rating-70" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
                </div>
                <button class="text-[#F85559] block m-auto mt-2.5 hover:underline" onclick="my_modal_4.showModal()">Details</button>
                <dialog id="my_modal_4" class="modal">
@@ -375,17 +400,17 @@
                   <h2 class="text-2xl font-extrabold text-black my-4">Banana</h2>
                   <p class="text-[15px] text-[#12121299]">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                   <div class="rating rating rating-half my-4">
-                     <input type="radio" name="rating-10" class="rating-hidden" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
-                     <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-80" class="rating-hidden" />
+                     <input type="radio" name="rating-80" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                     <input type="radio" name="rating-80" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-80" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" checked />
+                     <input type="radio" name="rating-80" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-80" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-80" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-80" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-80" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                     <input type="radio" name="rating-80" class="bg-[#F85559] mask mask-star-2 mask-half-1 ml-1.5" />
+                     <input type="radio" name="rating-80" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
                   </div>
                   <div class="modal-action gap-4 justify-center">                     
                      <button class="btn btn-error btn-outline px-6" id="modal_button_1">Close</button>
@@ -395,18 +420,18 @@
                </dialog>
             </div>            
          </div>
-         <div class="text-center pt-12">
+         <div class="text-center pt-6 lg:pt-12">
             <button class="btn btn-error text-white px-6">Shop All</button>
          </div>
       </section>
 
       <!-- TEAM -->
 
-      <section class="py-12">
+      <section class="py-6 lg:py-12">
          <div class="team py-10 lg:py-20 px-8 lg:px-24 text-center rounded-lg">
-            <h2 class="text-4xl font-bold mb-3">Meet the team section</h2>
+            <h2 class="text-2xl lg:text-4xl font-bold mb-3">Meet the team section</h2>
             <p class="text-base">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-6 justify-around mt-20 lg:mt-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 justify-around mt-20 lg:mt-16">
                <div>
                   <img src="images/member1.png" class="m-auto w-5/12 lg:w-1/2 mb-5">
                   <h3 class="text-[22px] text-white">Awlad Hossain</h3>
@@ -453,12 +478,12 @@
 
       <!-- Features -->
 
-      <section class="py-12 text-center">
+      <section class="py-6 lg:py-12 text-center">
          <h2 class="text-[#121212] text-2xl lg:text-4xl font-bold mb-3">Why Choose Us</h2>
          <p class="text-base text-[#12121299] px-10 lg:px-0">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br class="hidden lg:block"> Latin literature from 45 BC, making it over 2000 years old.</p>
-         <div class="flex flex-col lg:flex-row gap-4 mt-8">
-            <div class="w-full lg:w-4/12 text-center lg:text-left">
-               <div class="flex flex-col lg:flex-row pr-0 lg:pr-4 mb-6">
+         <div class="flex lg:flex flex-col lg:flex-row sm:grid grid-cols-2 gap-4 mt-8">
+            <div class="w-full lg:w-4/12 text-center lg:text-left sm:col-span-1">
+               <div class="flex flex-col gap-x-2 lg:flex-row pr-0 lg:pr-4 mb-6">
                   <div class="w-full lg:w-1/6">
                      <div class="bg-gray-200 w-10 p-2.5 rounded-full mt-2 mx-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -472,7 +497,7 @@
                      <p class="text-[#12121299] text-base px-16 lg:px-0">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                   </div>
                </div>
-               <div class="flex flex-col lg:flex-row pr-0 lg:pr-4 mb-6">
+               <div class="flex flex-col gap-x-2 lg:flex-row pr-0 lg:pr-4 mb-6">
                   <div class="w-full lg:w-1/6">
                      <div class="bg-gray-200 w-10 p-2.5 rounded-full mt-2 mx-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -486,7 +511,7 @@
                      <p class="text-[#12121299] text-base px-16 lg:px-0">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                   </div>
                </div>
-               <div class="flex flex-col lg:flex-row pr-0 lg:pr-4 mb-6">
+               <div class="flex flex-col gap-x-2 lg:flex-row pr-0 lg:pr-4 mb-6">
                   <div class="w-full lg:w-1/6">
                      <div class="bg-gray-200 w-10 p-2.5 rounded-full mt-2 mx-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -519,15 +544,15 @@
                   </div>
                </div>
             </div>
-            <div class="w-full lg:w-4/12 order-first lg:order-none">
-               <img src="images/whychoose1.png" alt="">
+            <div class="w-full sm:w-3/4 mx-auto lg:w-4/12 order-first lg:order-none sm:col-span-2">
+               <img src="images/whychoose1.png" alt="" class="w-full">
             </div>
-            <div class="w-full lg:w-4/12 text-center lg:text-right">
+            <div class="w-full lg:w-4/12 text-center lg:text-right sm:col-span-1 pt-1 lg:pt-0">
                <div class="flex flex-col-reverse lg:flex-row pl-4 mb-6">
                   <div class="w-full lg:w-5/6 static lg:relative">
                      <h6 class="text-[#121212] text-lg font-extrabold mt-2">Integrated Supplier</h6>
                      <hr class="w-1/4 h-0.5 bg-[#CFCFCF] my-2 mx-auto lg:mx-0 text-right static lg:absolute right-0">
-                     <p class="text-[#12121299] mt-4 text-base px-16 lg:px-0">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                     <p class="text-[#12121299] mt-4 text-base px-12 lg:px-0">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                   </div>
                   <div class="w-full lg:w-1/6 text-right static lg:relative">
                      <div class="right-0 static lg:absolute bg-gray-200 w-10 p-2.5 rounded-full lg:mt-2 mx-auto lg:mx-0">
@@ -557,7 +582,7 @@
                   <div class="w-full lg:w-5/6 static lg:relative">
                      <h6 class="text-[#121212] text-lg font-extrabold mt-2">Sustainable Practice</h6>
                      <hr class="w-1/4 h-0.5 bg-[#CFCFCF] my-2 text-right static lg:absolute right-0 mx-auto lg:mx-0 text-right static lg:absolute right-0">
-                     <p class="text-[#12121299] text-base mt-4">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                     <p class="text-[#12121299] text-base mt-4 px-12 lg:px-0">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                   </div>
                   <div class="w-full lg:w-1/6 text-right static lg:relative">
                      <div class="right-0 static lg:absolute bg-gray-200 w-10 p-2.5 rounded-full lg:mt-2 mx-auto lg:mx-0">
@@ -572,7 +597,7 @@
                   <div class="w-full lg:w-5/6 static lg:relative">
                      <h6 class="text-[#121212] text-lg font-extrabold mt-2">The Benefits Only</h6>
                      <hr class="w-1/4 h-0.5 bg-[#CFCFCF] my-2 text-right static lg:absolute right-0 mx-auto lg:mx-0 text-right static lg:absolute right-0">
-                     <p class="text-[#12121299] text-base mt-4">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                     <p class="text-[#12121299] text-base mt-4 px-12 lg:px-0">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                   </div>
                   <div class="w-full lg:w-1/6 text-right static lg:relative">
                      <div class="right-0 static lg:absolute bg-gray-200 w-10 p-2.5 rounded-full lg:mt-2 mx-auto lg:mx-0">
