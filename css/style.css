@@ -25,3 +25,31 @@ body{
    background-position: center center;
    color: white;
 }
+
+#slide1{
+   background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.3)), url(../images/banner1.png);
+   background-size: cover;
+   background-position: center center;
+   color: white;
+}
+
+#slide2{
+   background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.3)), url(../images/banner2.png);
+   background-size: cover;
+   background-position: center center;
+   color: white;
+}
+
+#slide3{
+   background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.3)), url(../images/banner3.png);
+   background-size: cover;
+   background-position: center center;
+   color: white;
+}
+
+#slide4{
+   background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.3)), url(../images/banner4.png);
+   background-size: cover;
+   background-position: center center;
+   color: white;
+}
